@@ -1,33 +1,36 @@
-# Setup Instructions
+# Kanban Board - Appzeto Machine Round
 
-## Backend
+## Backend Setup
 
-1. Navigate to the backend folder:
+### Install Backend Dependencies
 
 ```bash
-cd backend
+npm install express mongoose cors dotenv socket.io
+npm install -D nodemon
 ```
 
-2. Install dependencies:
+Or install all dependencies from `package.json`:
 
 ```bash
 npm install
 ```
 
-3. Create a `.env` file in the backend root directory and add:
+### Environment Variables
+
+Create a `.env` file in the backend root directory:
 
 ```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/kanban-board-Appzeto
 ```
 
-4. Start the backend server using Nodemon:
+### Run Backend Server
 
 ```bash
 nodemon server.js
 ```
 
-Or, if you have a script in `package.json`:
+or
 
 ```bash
 npm run dev
@@ -35,27 +38,28 @@ npm run dev
 
 ---
 
-## Frontend
+## Frontend Setup
 
-1. Navigate to the frontend folder:
+### Install Frontend Dependencies
 
 ```bash
-cd frontend
+npm install react react-dom socket.io-client react-router-dom
+npm install
 ```
 
-2. Install dependencies:
+If the project was created using Vite, install Vite dependencies:
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+### Run Frontend
 
 ```bash
 npm run dev
 ```
 
-4. Open the URL shown in the terminal (usually):
+Open:
 
 ```text
 http://localhost:5173
@@ -63,14 +67,71 @@ http://localhost:5173
 
 ---
 
-## Requirements
+## Complete Backend Dependencies
 
-- Node.js installed
-- MongoDB running locally
-- Nodemon installed globally (optional)
+```json
+{
+  "cors": "^latest",
+  "dotenv": "^latest",
+  "express": "^latest",
+  "mongoose": "^latest",
+  "socket.io": "^latest"
+}
+```
 
-Install Nodemon globally:
+### Development Dependencies
+
+```json
+{
+  "nodemon": "^latest"
+}
+```
+
+---
+
+## Complete Frontend Dependencies
+
+```json
+{
+  "react": "^latest",
+  "react-dom": "^latest",
+  "react-router-dom": "^latest",
+  "socket.io-client": "^latest"
+}
+```
+
+---
+
+## Install Everything
+
+### Backend
 
 ```bash
-npm install -g nodemon
+cd backend
+npm install
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+---
+
+## Start Application
+
+### Terminal 1 (Backend)
+
+```bash
+cd backend
+nodemon server.js
+```
+
+### Terminal 2 (Frontend)
+
+```bash
+cd frontend
+npm run dev
 ```
